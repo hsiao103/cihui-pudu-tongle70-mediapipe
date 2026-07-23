@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#7d1117" />
+  <meta name="description" content="慈惠寺普渡 × 同樂70序曲 MediaPipe AI數位祈福互動" />
+  <link rel="icon" href="./assets/icon.svg" />
+  <title>慈惠寺普渡 × 同樂70序曲</title>
+</head>
+<body>
+  <div id="app">
+    <header class="hero">
+      <div class="eyebrow">慈惠寺普渡文化互動</div>
+      <h1>慈惠寺普渡 <span>×</span> 同樂70序曲</h1>
+      <p>傳統信仰 × 科技互動 × 校園共好</p>
+    </header>
+
+    <main class="layout">
+      <section class="camera-card">
+        <div class="stage" id="stage">
+          <video id="video" autoplay playsinline muted></video>
+          <canvas id="overlay"></canvas>
+
+          <div class="welcome" id="welcome">
+            <img src="./assets/mazu.svg" alt="Q版媽祖" />
+            <h2>AI 媽祖祈福鏡</h2>
+            <p>請微笑並在胸前雙手合掌，接收媽祖的平安祝福。</p>
+            <button id="startButton" type="button">開始體驗</button>
+            <div id="startupMessage" class="startup-message"></div>
+          </div>
+
+          <div id="status" class="status">尚未啟動鏡頭</div>
+
+          <div id="blessingPanel" class="blessing">
+            <small>媽祖慈光護佑</small>
+            <strong id="blessingText">平安順遂，福慧增長。</strong>
+            <span>慈惠寺普渡 × 同樂70序曲</span>
+          </div>
+
+          <div id="flash" class="flash"></div>
+        </div>
+
+        <div class="controls">
+          <button id="captureButton" type="button" disabled>拍下祝福照</button>
+          <button id="switchButton" type="button" class="light" disabled>切換鏡頭</button>
+          <button id="resetButton" type="button" class="light">重新體驗</button>
+        </div>
+      </section>
+
+      <aside class="info-card">
+        <div class="brand">
+          <img src="./assets/mazu.svg" alt="" />
+          <div><b>普渡祈福</b><span>同樂70週年序曲</span></div>
+        </div>
+
+        <ol>
+          <li><b>臉部定位</b><span>站在畫面中央</span></li>
+          <li><b>微笑迎福</b><span>保持自然笑容</span></li>
+          <li><b>合掌祈福</b><span>胸前維持約1秒</span></li>
+          <li><b>保存紀念</b><span>下載個人祝福照</span></li>
+        </ol>
+
+        <article>
+          <b>活動意義</b>
+          <p>以慈惠寺普渡文化為場域，結合同樂國小70週年序曲，運用 MediaPipe 臉部與手部辨識，讓地方信仰、文化傳承與科技教育產生新的連結。</p>
+        </article>
+        <p class="privacy">影像只在瀏覽器內即時處理，不會自動上傳。</p>
+      </aside>
+    </main>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
